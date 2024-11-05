@@ -1,12 +1,20 @@
 import { useState } from "react";
 
+/*
 export interface Person{
     name: string;
     age: number;
     isMarried:boolean;
 } //type can be used anywhere in project when exported 
- 
-export const Person = (props: Person)=> {
+ */
+
+interface Props{
+    name: string;
+    age: number;
+    isMarried: boolean;
+}
+
+export const Person = (props: Props)=> {
     const [isShowInfo, setShowInfo] = useState<boolean|null>(false);
     const [bio, setBio] = useState<string | null>("me");
 
