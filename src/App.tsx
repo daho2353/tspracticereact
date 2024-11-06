@@ -1,5 +1,6 @@
 import './App.css'
-import { Person } from "./Person";
+import { Person, Countries } from "./Person";
+import { UserProvider } from './UserContextProvider';
 
 let name: string = "";
 let age: number = 0; 
@@ -10,7 +11,9 @@ let isMarried: boolean = false;
 function App() {
 
   return(
-    <Person name={"Damian"} age={25} isMarried={false} />
+    <UserProvider>
+      <Person name={"Damian"} age={25} isMarried={false} country={Countries.Japan}/>
+    </UserProvider>
 
   );
   

@@ -28,7 +28,7 @@ interface Props {
 }
 
 
-export const userProvider = (props: Props) => { //Provider function which sets the initial state of the User and functions and returns the child results and potential values
+export const UserProvider = (props: Props) => { //Provider function which sets the initial state of the User and functions and returns the child results and potential values
     const [users, setUsers] = useState<User[] | null>(null) 
 
     useEffect( () => {
